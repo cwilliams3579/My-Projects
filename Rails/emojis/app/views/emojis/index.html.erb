@@ -1,0 +1,12 @@
+<% if flash[:error] %>
+<p id="errors"><%= flash[:error] %></p>
+<% end %>
+<div class="container">
+<h1>Share your mode</h1>
+<p>Please enter your emoji code here:</p>
+<form class="form-horizontal" action="/mood" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="text" name="emoji" class="form-group">
+  <input type="submit" class="btn btn-default" value="Check Code">
+</form>
+</div>

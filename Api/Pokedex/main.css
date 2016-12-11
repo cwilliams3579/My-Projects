@@ -1,0 +1,26 @@
+div {
+    box-sizing: border-box;
+    
+}
+
+#pokemon {
+    width: 70%;
+    display: inline-block;
+}
+
+#pokedex {
+    width: 30%;
+    min-height: 300px;
+    display: inline-block;
+    border: 5px solid red;
+    vertical-align: top;
+    position: fixed;
+    padding: 25px;
+    text-align: center;
+    list-style: none;
+}
+
+#pokedex h1,
+#pokedex img {
+    text-align: center;
+}

@@ -1,0 +1,32 @@
+.form-group{
+	margin: 0 auto;
+}
+img{
+	margin-top: 80px;
+	width: 400px;
+}
+h1{
+	text-align: center;
+}
+form p {
+	display: inline;
+	color: red;
+}
+
+form {
+	width: 500px;
+}
+
+.container {
+	width: 700px;
+	margin: 0 auto;
+}
+.btn-primary{
+	margin-top: 10px;
+}
+#from, #to, #cruise{
+	margin-bottom: 20px;
+}
+#cruise{
+	margin-left: 355px
+}

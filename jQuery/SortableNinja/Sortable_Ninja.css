@@ -1,0 +1,11 @@
+#sort{
+	width: 380px;
+	margin: 0 auto;
+}
+h1{
+	text-align: center;
+	color: #164147;
+}
+img{
+	box-shadow: 20px 20px 10px #888888;
+}

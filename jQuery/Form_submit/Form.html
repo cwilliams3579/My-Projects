@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery UI Datepicker - Default functionality</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="Form.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+	<script src="Form.js"></script>
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.5/css/bootstrap.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Pick a cruise date</h1>
+		<img id="cruise" src="/jQuery/Form_submit/cruise.jpg" alt="">
+		<form class="form-group">
+			<span>From: <input id="from" type="date" class="dp form-control" /></span>
+			<p>From cannot be blank!</p>
+			<span>To: <input id="to" type="date" class="dp form-control" /></span>
+			<p>To cannot be blank!</p>
+			<span>Name: <input id="name" type="text" class="form-control" placeholder="Enter your name"/></span>
+			<p>Your name cannot be blank!</p>
+			<input class="btn btn-primary" type="submit" name="Check Dates!" />
+		</form>
+	</div>
+</body>
+
+</html>

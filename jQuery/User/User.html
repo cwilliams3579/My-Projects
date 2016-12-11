@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Add user</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="User.css">
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.5/css/bootstrap.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("form").submit(function () {
+				$("#users").append("<tr>" +
+					"<td>" + $("#fname").val() + "</td>" +
+					"<td>" + $("#lname").val() + "</td>" +
+					"<td>" + $("#email").val() + "</td>" +
+					"<td>" + $("#contact").val() + "</td>" +
+					"</tr>")
+				$(".info").val("");
+				return false;
+			});
+
+		});
+	</script>
+</head>
+
+<body>
+		<div class="container">
+	<h2>Users</h2>
+	<table>
+			<table class="table table-bordered" id="users">
+				<thead>
+					<tr>
+						<th>Firstname</th>
+						<th>Lastname</th>
+						<th>Email</th>
+						<th>Contact Number</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		<h3>Add a User</h3>
+		<form>
+			<input class="info form-control" id="fname" type="text" placeholder="First Name" />
+			<input class="info form-control" id="lname" type="text" placeholder="Last Name" />
+			<input class="info form-control" id="email" type="text" placeholder="Email Address" />
+			<input class="info form-control" id="contact" type="number" placeholder="Contact Number" />
+			<input type="submit" class="btn btn-primary" value="Add User" />
+		</form>
+		</div>
+</body>
+
+</html>

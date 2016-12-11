@@ -1,0 +1,16 @@
+#users{
+	text-indent: 40px;
+	border: 2px solid rgba(185, 95, 95, 0.06);
+}
+form{
+	width: 450px;
+	font-size: x-large;
+	margin: 0 auto;
+}
+h2, h3 {
+    text-decoration: underline;
+		text-align: center;
+}
+.info{
+	margin-bottom: 10px;
+}

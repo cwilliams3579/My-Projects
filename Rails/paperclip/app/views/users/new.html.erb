@@ -1,0 +1,10 @@
+<h2>Upload an image:</h2>
+<%= form_for @user, :url => users_path, :html => { :class => "form-group", :multipart => true} do |f| %>
+  <%= f.label :your_name %>
+  <%= f.text_field :name, :class => "form-control" %>
+  <%= f.label :image %>
+  <%= f.file_field :avatar, :class => "form-control" %>
+  <%= f.label :description %>
+  <%= f.text_area :description, :class => "form-control"  %>
+  <%= f.submit :submit, :class => "btn btn-primary"  %>
+<% end %>
