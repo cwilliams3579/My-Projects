@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+		<title>Epic Button Game</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    	<script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+        <link rel="stylesheet" href="http://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.5/css/bootstrap.css">
+    	<style>
+            body{width: 600px; margin: 0 auto;}
+    		.btn-primary{
+    			background-color: blue;
+                display: inherit;
+                margin: 0 auto;
+                border: none;
+                border-radius: 20px;
+                padding: 15px 32px;
+    			width: 240px;
+    			height: 60px;
+    			font-size: 18px;
+
+    		}
+            h3, #countResponse{text-align: center;}
+            #btn:hover {background-color: green;}
+        
+    		#reset{
+                position: absolute;
+                margin-left: 450px;
+                color: white;
+                font-size: 12px;
+                padding: 4px;
+                margin-top:200px;
+                width: 100px;
+                background-color: red;
+    		}
+    	</style>
+    	<script type="text/javascript">
+    		$(document).ready(function(){
+    			var socket = io.connect();
+    			socket.on("push", function(data){
+    				$("#countResponse").html(data.new);
+    			});
+    			$("#btn").click(function(e){
+    				e.preventDefault();
+    				socket.emit("epic_clicked");
+    			});
+    			socket.on("epic_response", function(data){
+    				console.log(data.response);
+    				$("#countResponse").html(data.response);
+    			})
+    			$("#reset").click(function(){
+    				socket.emit("reset_clicked");
+    			});
+    			socket.on("reset_response", function(data){
+    				console.log(data.reset);
+    				$("#countResponse").text(data.reset);
+    			});
+    		});
+    	</script>
+    </head>
+    <body>
+        <head>
+    	   <h1 id="countResponse"></h1> 
+        </head>
+        <h3>Push the button to update the count!</h3>
+        <button class="btn btn-primary" id="btn">Push the epic button</button>
+        <button class="btn btn-danger" id="reset">Reset Count</button>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ninjas</title>
+	<style type="text/css" media="screen">
+		img{width: 400px;}
+	</style>
+</head>
+<body>
+	{% for x in ninjas %}
+		<img src="{{ url_for('static', filename='images/'+x+'.jpg')}}" alt="{{x}}">
+	{% endfor %}
+</body>
+</html>
